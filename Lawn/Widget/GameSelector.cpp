@@ -653,8 +653,8 @@ void GameSelector::DrawOverlay(Graphics* g)
 		float aTransSubX = aTransAreaX;
 		float aTransSubY = aTransAreaY;
 
-		int aStage = ClampInt((mLevel - 1) / 10 + 1, 1, 6);  // ´ó¹Ø
-		int aSub = mLevel - (aStage - 1) * 10;  // Ð¡¹Ø
+		int aStage = ClampInt((mLevel - 1) / 10 + 1, 1, 6);
+		int aSub = mLevel - (aStage - 1) * 10;
 		if (mApp->IsTrialStageLocked() && (mLevel >= 25 || mApp->HasFinishedAdventure()))
 		{
 			aStage = 3;
@@ -678,7 +678,7 @@ void GameSelector::DrawOverlay(Graphics* g)
 
 		g->SetColorizeImages(true);
 		g->SetColor(mAdventureButton->mColors[ButtonWidget::COLOR_BKG]);
-		TodDrawImageCelF(g, Sexy::IMAGE_SELECTORSCREEN_LEVELNUMBERS, aTransAreaX + 486.0f, aTransAreaY + 47.0f, aStage, 0);  // »æÖÆ´ó¹ØÊý
+		TodDrawImageCelF(g, Sexy::IMAGE_SELECTORSCREEN_LEVELNUMBERS, aTransAreaX + 486.0f, aTransAreaY + 47.0f, aStage, 0);
 		if (aSub < 10)
 		{
 			TodDrawImageCelF(g, Sexy::IMAGE_SELECTORSCREEN_LEVELNUMBERS, aTransSubX + 509.0f, aTransSubY + 50.0f, aSub, 0);
