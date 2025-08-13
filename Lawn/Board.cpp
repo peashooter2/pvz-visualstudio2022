@@ -8529,9 +8529,9 @@ void Board::KeyChar(SexyChar theChar)
 void Board::AddSunMoney(int theAmount)
 {
 	mSunMoney += theAmount;
-	if (mSunMoney > 9990)
+	if (mSunMoney > 9999)
 	{
-		mSunMoney = 9990;
+		mSunMoney = 9999;
 	}
 }
 
